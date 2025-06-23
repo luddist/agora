@@ -1,0 +1,113 @@
+body {
+  background-color: black;
+  color: var(--main-green);
+  font-family: monospace;
+  padding: 20px;
+  margin: 0;
+  font-size: 19px;
+}
+:root {
+  --main-green: #00ff00;
+}
+#terminal {
+  max-width: 1000px;
+  margin: auto;
+  white-space: pre-wrap;
+
+  
+}
+
+.input-line {
+  
+  opacity: 1;
+  margin-top: -2em;
+  transition: opacity 0.5s;
+}
+
+.prompt {
+  margin-right: 5px;
+  
+}
+
+#input {
+  background: transparent;
+  border: none;
+  color: var(--main-green);
+  outline: none;
+  width: 100%;
+  font-size: 19px;
+}
+
+.terminal-banner {
+  color: var(--main-green);
+  text-shadow:
+    0 0 5px var(--main-green),
+    0 0 10px var(--main-green),
+    0 0 20px var(--main-green);
+  font-family: monospace;
+  white-space: pre;
+  margin-bottom: 1em;
+
+}
+
+.neon {
+ color: var(--main-green);
+  text-shadow:
+     0 0 5px var(--main-green),
+    0 0 10px var(--main-green),
+    0 0 20px var(--main-green);
+    
+  font-weight: bold;
+}
+
+/* drop in animation for banner */
+#banner {
+  white-space: pre;
+  font-family: monospace;
+}
+
+.banner-line {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: dropIn 0.4s ease forwards;
+}
+
+@keyframes dropIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#welcome {
+  display: none;
+  opacity: 0;
+  margin-top: -4em;
+}
+
+.fade-in {
+  opacity: 1 !important;
+  transition: opacity 0.5s ease;
+}
+
+
+/* ...existing code... */
+.my-message {
+  color: var(--my-message-color, var(--main-green));
+  margin: 2px 0;
+  font-weight: bold;
+}
+.other-message {
+  color: #fff;
+  margin: 2px 0;
+}
+#output {
+  min-height: 200px;
+  margin-bottom: 1em;
+}
+/* ...existing code... */
+.system-message {
+  color: #313731;
+  font-style: italic;
+  margin: 2px 0;
+}
