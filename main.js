@@ -5,6 +5,7 @@ const input = document.getElementById('input');
 const output = document.getElementById('output');
 const welcome = document.getElementById('welcome');
 const inputLine = document.querySelector('.input-line');
+const sendBtn = document.getElementById('sendBtn');
 
 // Komutlar nesnesi
 const commands = {
@@ -145,3 +146,7 @@ document.getElementById('terminal').addEventListener('click', () => {
     input.focus();
 });
 
+sendBtn.addEventListener('click', function() {
+    const event = new KeyboardEvent('keydown', { key: 'Enter' });
+    input.dispatchEvent(event);
+});
